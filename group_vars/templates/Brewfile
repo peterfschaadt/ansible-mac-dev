@@ -1,0 +1,111 @@
+#
+### Brew Taps
+#
+
+tap 'homebrew/binary'
+tap 'homebrew/bundle'
+tap 'caskroom/cask'
+
+#
+### Brew Packages
+#
+
+brew 'caskroom/cask/brew-cask'
+brew 'ack'
+brew 'archey'
+brew 'autoconf'
+brew 'cowsay'
+brew 'cpanminus'
+brew 'fortune'
+brew 'fpp'
+brew 'icdiff'
+brew 'mackup'
+brew 'openssl'
+brew 'mysql'
+brew 'pkg-config'
+brew 'node'
+brew 'packer'
+brew 'pv'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+# brew 'redis', restart_service: true
+brew 'sl'
+brew 'wget'
+
+#
+### Brew Cask Options
+#
+
+cask_args caskroom: '~/Caskroom/Applications'
+cask_args appdir: '/Applications'
+
+#
+# Brew Cask Applications
+#
+
+# cask 'android-file-transfer'
+# cask 'android-studio'
+cask 'arq'
+cask 'bartender'
+cask 'balsamiq-mockups'
+# cask 'cathode'
+cask 'charles'
+# cask 'cocoarestclient'
+cask 'colorsnapper'
+cask 'dash'
+cask 'dockertoolbox'
+cask 'dropbox'
+cask 'evernote'
+cask 'fantastical'
+cask 'filezilla'
+cask 'firefox'
+# cask 'fitbit-connect'
+# cask 'flirc'
+cask 'flux'
+cask 'flycut'
+cask 'github-desktop'
+cask 'google-chrome'
+cask 'google-drive'
+# cask 'htc-sync-manager'
+cask 'iterm2'
+# cask 'jing'
+# cask 'join.me'
+cask 'karabiner'
+# cask 'little-snitch'
+cask 'macdown'
+# cask 'namebench'
+# cask 'paw'
+cask 'pycharm'
+cask 'radiant-player'
+cask 'sequel-pro'
+# cask 'silverlight'
+cask 'slack'
+# cask 'smcfancontrol'
+cask 'sonos'
+cask 'spectacle'
+cask 'sublime-text'
+cask 'the-unarchiver'
+cask 'transmission'
+# cask 'tribler'
+cask 'vagrant'
+# cask 'vagrant-manager'
+# cask 'virtualbox'
+cask 'vlc'
+
+#
+### Other Applications (* = App Store only)
+#
+
+# Amphetamine *
+# AVNavigator 2013
+# BIG-IP Edge Client
+# Disk Diag *
+# Eggscellent *
+# Google Chrome Canary
+# Memory Monitor *
+# PdaNetMac
+# Pomodoro Time *
+# Sketch *
+# Sparrow
+# SyncTwoFolders
+# TIPP10
