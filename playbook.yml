@@ -7,6 +7,7 @@
     user_hostname: ''
     # Osxlockdown options
     osxlockdown_install: True
+    osxlockdown_url: https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
     osxlockdown_path: '{{ user_home }}'
     # Shell options
     zsh_install: True
@@ -47,14 +48,25 @@
 ### Osxlockdown
 #
 
+    - name: Download osxlockdown
+      get_url:
+        url={{ osxlockdown_url }}
+        dest={{ osxlockdown_path }}
+
+    - name: Unarchive osxlockdown
+      unarchive:
+        src={{ osxlockdown_path }}
+        dest={{ osxlockdown_path }}
+        copy=no
+
     - name: Run osxlockdown
-      command: ./osxlockdown --commands_file {{ osxlockdown_path }}
-        chdir: '{{ user_home }}'
+      command: ./osxlockdown --commands_file {{ osxlockdown_path }}/commands.json
+        chdir={{ osxlockdown_path }}
       sudo: True
       when: osxlockdown_install == True
 
 #
-# Python, Pip, virtualenv
+### Python, Pip, virtualenv
 #
 
     - name: Install virtualenv-burrito

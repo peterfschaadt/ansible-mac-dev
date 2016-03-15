@@ -1,5 +1,5 @@
-Provision a Mac for Development with Ansible
-============================================
+Provision a Mac for Development using Ansible
+=============================================
 
 Provision a machine running Mac OS X for development using [Ansible](https://www.ansible.com).
 
