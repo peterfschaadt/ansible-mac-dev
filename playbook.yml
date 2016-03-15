@@ -4,6 +4,7 @@
     # User options
     username: ''
     user_home: ''
+    user_hostname: ''
     # Osxlockdown options
     osxlockdown_install: True
     osxlockdown_path: True
@@ -25,13 +26,17 @@
     - name: Print playbook info
       debug: msg="Configuring Mac as user {{ lookup('env','USER') }}"
 
+    - name: Set hostname
+      command: scutil --set HostName {{ user_hostname }}
+      sudo: True
+
     - name: Install Mac command-line tools (without Xcode)
       command: xcode-select --install
 
     - name: Run osxlockdown
       command: ./osxlockdown --commands_file {{ osxlockdown_config }}
       sudo: True
-      when: osxlockdown == True
+      when: osxlockdown_install == True
 
     - name: Install pip with easy_install
       easy_install: name=pip
