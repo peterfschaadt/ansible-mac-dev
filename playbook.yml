@@ -1,0 +1,145 @@
+---
+- hosts: mac
+  vars:
+    # User options
+    username: ''
+    user_home: ''
+    # Osxlockdown options
+    osxlockdown_install: True
+    osxlockdown_path: True
+    # Shell options
+    zsh_install: True
+    zsh_zprezto_install: True
+    # Brew options
+    brew_update: True
+    brew_bundle: True
+    brew_cask: True
+    # Node options
+    node_install: True
+    # Python options
+    pip_install: True
+    # Ruby options
+    ruby_gems_install: False
+
+  tasks:
+    - name: Print playbook info
+      debug: msg="Configuring Mac as user {{ lookup('env','USER') }}"
+
+    - name: Install Mac command-line tools (without Xcode)
+      command: xcode-select --install
+
+    - name: Run osxlockdown
+      command: ./osxlockdown --commands_file {{ osxlockdown_config }}
+      sudo: True
+      when: osxlockdown == True
+
+    - name: Install pip with easy_install
+      easy_install: name=pip
+      sudo: True
+
+    - name: Install virtualenv-burrito
+      command: curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | $SHELL
+
+    - name: Install global packages with pip
+      pip:
+        name={{ item }}
+        state=latest
+      sudo: True
+      with_items:
+        - ansible
+        - virtualenv
+        - virtualenv-wrapper
+
+    - name: Install Homebrew with Ruby
+      command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    - name: Update homebrew and upgrade all packages
+      homebrew:
+        update_homebrew=yes
+        upgrade_all=yes
+
+    - name: Install bundle tap
+      homebrew_tap:
+        tap={{ item }}
+        state=present
+      with_items:
+          - homebrew/bundle
+      when: brew_bundle == True
+
+    - name: Install caskroom tap
+      homebrew_tap:
+        tap={{ item }}
+        state=present
+      with_items:
+          - caskroom/cask
+      when: brew_cask == True
+
+    - name: Install other taps
+      homebrew_tap:
+        tap={{ item }}
+        state=present
+      with_items:
+          - gapple/services
+          - pivotal/tap
+
+    - name: Copy Homebrew bundle file
+      template:
+        src='group_vars/templates/Brewfile.j2'
+        dest='{{ remote_dir_application }}/_settings.py'
+
+    - name: Install programs with Homebrew's bundle
+      command: brew bundle
+
+    - name: Install programs with Homebrew
+      sudo: False
+      homebrew:
+        name={{ item }}
+        state=present
+        update_homebrew=yes
+      with_items:
+          - brew-cask
+          - coreutils
+          - git
+          - wget
+          - dnsmasq
+          - httpie
+          - mackup
+          - rbenv
+          - ruby
+
+    - name: Install Node.js
+      homebrew:
+        name=node
+        state=present
+        update_homebrew=yes
+      when: node_install == True
+
+    - name: Install global apps with npm
+      npm:
+        name={{ item }}
+        global=yes
+      with_items:
+        - grunt-cli
+      when: node_install == True
+
+    - name: Create home directory symlinks
+      file: src={{ item.from }} dest={{ item.to }} state=link
+      sudo: no
+      with_items:
+        - from: ~/Dropbox/mac/bin
+          to: ~/bin
+
+    - name: Install Ruby gems
+      gem: name={{ item }} state=latest
+      with_items:
+        - brewbygems
+        - bundler
+        - compass
+      when: ruby_gems_install == True
+
+# Run Mackup
+
+    # - name: Create symlink subl for Sublime Text's subl command
+    #   file: src=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl dest=/usr/bin/subl state=link
+
+# Install zprezto (https://github.com/sorin-ionescu/prezto)
