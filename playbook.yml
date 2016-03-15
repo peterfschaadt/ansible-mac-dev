@@ -7,7 +7,7 @@
     user_hostname: ''
     # Osxlockdown options
     osxlockdown_install: True
-    osxlockdown_path: True
+    osxlockdown_path: '{{ user_home }}'
     # Shell options
     zsh_install: True
     zsh_zprezto_install: True
@@ -29,6 +29,8 @@
     mackup_install: True
     mackup_restore: True
     mackup_backup: True
+    mackup_engine: 'dropbox'
+    mackup_path: ''
 
   tasks:
     - name: Print playbook info
@@ -46,7 +48,7 @@
 #
 
     - name: Run osxlockdown
-      command: ./osxlockdown --commands_file {{ osxlockdown_config }}
+      command: ./osxlockdown --commands_file {{ osxlockdown_path }}
         chdir: '{{ user_home }}'
       sudo: True
       when: osxlockdown_install == True
@@ -133,6 +135,10 @@
           - rbenv
           - ruby
 
+#
+# Node.js
+#
+
     - name: Install Node.js
       homebrew:
         name=node
@@ -153,7 +159,6 @@
 #
 
     - name: Configure Sublime Text CLI tool
-      # command: mkdir -p ~/bin && ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" {{ user_home }}/bin/subl
       file:
         src=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
         dest=/usr/bin/subl
@@ -204,7 +209,17 @@
         - compass
       when: ruby_gems_install == True
 
-# Run Mackup
+# TODO: Run osxdefaults
+
+#
+### Mackup
+#
+
+    - name: Run Mackup restore
+      command: mackup restore
+
+    - name: Run Mackup backup
+      command: mackup backup
 
     # - name: Create symlink subl for Sublime Text's subl command
     #   file: src=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl dest=/usr/bin/subl state=link
