@@ -1,0 +1,8 @@
+---
+
+- name: 'Add Git config file'
+  template:
+    src=gitconfig.j2
+    dest={{ user_home }}/.gitconfig
+    owner={{ username }}
+    group=staff
