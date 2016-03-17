@@ -1,1 +1,15 @@
 ---
+
+- name: main.yml | All roles
+  hosts: mac
+  sudo: True
+
+  roles:
+    # - { role: general, tags: ['general'] }
+    - { role: general }
+    - { role: osxlockdown }
+    - { role: python }
+    - { role: homebrew }
+    - { role: git }
+    - { role: mackup }
+    - { role: sublime_text }
