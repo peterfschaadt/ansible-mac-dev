@@ -6,71 +6,8 @@
 # - Osxlockdown
 # - Python
 # - Homebrew
-# - Homebrew Cask
 
   tasks:
-
-#
-#
-### Homebrew
-#
-
-    - name: Install Homebrew with Ruby
-      command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-    - name: Update Homebrew and upgrade all packages
-      homebrew:
-        update_homebrew=yes
-        upgrade_all=yes
-
-    - name: Install bundle tap
-      homebrew_tap:
-        tap={{ item }}
-        state=present
-      with_items:
-          - homebrew/bundle
-      when: brew_bundle == True
-
-    - name: Install caskroom tap
-      homebrew_tap:
-        tap={{ item }}
-        state=present
-      with_items:
-          - caskroom/cask
-      when: brew_cask == True
-
-    - name: Install other taps
-      homebrew_tap:
-        tap={{ item }}
-        state=present
-      with_items:
-          - gapple/services
-          - pivotal/tap
-
-    - name: Copy Homebrew bundle file
-      template:
-        src='group_vars/templates/Brewfile.j2'
-        dest='{{ remote_dir_application }}/_settings.py'
-
-    - name: Install programs with Homebrew's bundle
-      command: brew bundle
-
-    - name: Install programs with Homebrew
-      sudo: False
-      homebrew:
-        name={{ item }}
-        state=present
-        update_homebrew=yes
-      with_items:
-          - brew-cask
-          - coreutils
-          - git
-          - wget
-          - dnsmasq
-          - httpie
-          - mackup
-          - rbenv
-          - ruby
 
 #
 # Node.js
