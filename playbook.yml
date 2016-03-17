@@ -1,20 +1,14 @@
 ---
 - hosts: mac
 
+# Roles
+# - General
+# - Osxlockdown
+# - Python
+# - Homebrew
+# - Homebrew Cask
+
   tasks:
-    - name: Print playbook info
-      debug: msg="Configuring Mac as user {{ lookup('env','USER') }}"
-
-    - name: Set hostname
-      command: scutil --set HostName {{ user_hostname }}
-      sudo: True
-
-    - name: Install Mac command-line tools (without Xcode)
-      command: xcode-select --install
-
-#
-### Osxlockdown
-#
 
 #
 ### Python, Pip, virtualenv
