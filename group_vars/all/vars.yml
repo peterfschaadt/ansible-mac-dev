@@ -1,1 +1,41 @@
 ---
+
+# User options
+username: ''
+user_home: ~
+user_hostname: ''
+
+# Osxlockdown options
+osxlockdown_install: True
+osxlockdown_url: https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
+osxlockdown_path: '{{ user_home }}'
+
+# Shell options
+zsh_install: True
+zsh_zprezto_install: True
+
+# Brew options
+brew_update: True
+brew_bundle: True
+brew_cask: True
+
+# Node options
+node_install: True
+
+# Python options
+pip_install: True
+
+# Ruby options
+ruby_gems_install: False
+
+# Sublime Text options
+sublime_install: True
+sublime_cli_install: True
+sublime_package_manager_install: True
+
+# Mackup options:
+mackup_install: True
+mackup_restore: True
+mackup_backup: True
+mackup_engine: 'dropbox'
+mackup_path: ''
