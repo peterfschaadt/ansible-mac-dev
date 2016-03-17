@@ -7,6 +7,7 @@
 # - Python
 # - Homebrew
 # - Git
+# - Mackup
 # - Sublime Text
 
   tasks:
@@ -55,17 +56,4 @@
 
 # TODO: Run osxdefaults
 
-#
-### Mackup
-#
-
-    - name: Run Mackup restore
-      command: mackup restore
-
-    - name: Run Mackup backup
-      command: mackup backup
-
-    # - name: Create symlink subl for Sublime Text's subl command
-    #   file: src=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl dest=/usr/bin/subl state=link
-
-# Install zprezto (https://github.com/sorin-ionescu/prezto)
+# TODO: Install zprezto (https://github.com/sorin-ionescu/prezto)
