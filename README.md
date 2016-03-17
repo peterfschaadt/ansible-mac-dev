@@ -19,6 +19,18 @@ Features
 - Mackup backup
 
 
+Roles
+-----
+
+- General
+- Osxlockdown
+- Python
+- Homebrew
+- Git
+- Mackup
+- Sublime Text
+
+
 Usage
 -----
 
