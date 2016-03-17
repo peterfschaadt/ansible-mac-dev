@@ -1,0 +1,19 @@
+---
+# Tasks for Python role
+
+- name: Install virtualenv-burrito
+  command: curl -sL https://raw.githubusercontent.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | $SHELL
+
+- name: Install pip with easy_install
+  easy_install: name=pip
+  sudo: True
+
+- name: Install global packages with pip
+  pip:
+    name={{ item }}
+    state=latest
+  sudo: True
+  with_items:
+    - ansible
+    - virtualenv
+    - virtualenv-wrapper

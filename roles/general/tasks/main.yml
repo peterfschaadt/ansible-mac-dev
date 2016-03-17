@@ -1,4 +1,5 @@
 ---
+# Tasks for General role
 
 - name: Print playbook info
   debug: msg="Configuring Mac as user {{ lookup('env','USER') }}"

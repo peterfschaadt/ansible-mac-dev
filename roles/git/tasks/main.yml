@@ -1,4 +1,5 @@
 ---
+# Tasks for Git role
 
 - name: 'Add Git config file'
   template:
