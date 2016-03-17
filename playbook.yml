@@ -6,6 +6,8 @@
 # - Osxlockdown
 # - Python
 # - Homebrew
+# - Git
+# - Sublime Text
 
   tasks:
 
@@ -27,38 +29,6 @@
       with_items:
         - grunt-cli
       when: node_install == True
-
-#
-### Sublime Text
-#
-
-    - name: Configure Sublime Text CLI tool
-      file:
-        src=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
-        dest=/usr/bin/subl
-        state=link
-      creates: /usr/bin/subl
-      when: sublime_cli_install == True
-
-    - name: Install Sublime Text Package Manager
-      command: python -c "import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'"
-      creates: {{ user_home }}/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package Control.sublime-package
-      when: sublime_package_manager_install == True
-
-    - name: Manually install these plugins with Sublime Text Package Manager
-      debug:
-        msg={{ item }}
-      with_items:
-        0_package_control_loader
-        Ansible
-        AutoPEP8
-        Git
-        GitGutter-Edge
-        GitGutter
-        Package Control
-        SideBarEnhancements
-        Theme - amCoder
-        Unicode Character Highlighter
 
 #
 ### Symlinks
