@@ -16,23 +16,6 @@
 ### Osxlockdown
 #
 
-    - name: Download osxlockdown
-      get_url:
-        url={{ osxlockdown_url }}
-        dest={{ osxlockdown_path }}
-
-    - name: Unarchive osxlockdown
-      unarchive:
-        src={{ osxlockdown_path }}
-        dest={{ osxlockdown_path }}
-        copy=no
-
-    - name: Run osxlockdown
-      command: ./osxlockdown --commands_file {{ osxlockdown_path }}/commands.json
-        chdir={{ osxlockdown_path }}
-      sudo: True
-      when: osxlockdown_install == True
-
 #
 ### Python, Pip, virtualenv
 #
