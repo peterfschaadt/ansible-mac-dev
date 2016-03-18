@@ -29,6 +29,7 @@ Roles
 - Git
 - Mackup
 - Sublime Text
+- Node
 
 
 Usage

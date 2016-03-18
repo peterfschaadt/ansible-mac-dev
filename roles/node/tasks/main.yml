@@ -1,0 +1,17 @@
+---
+# Tasks for Node
+
+- name: Install Node.js
+  homebrew:
+    name=node
+    state=present
+    update_homebrew=yes
+  when: node_install == True
+
+- name: Install global apps with npm
+  npm:
+    name={{ item }}
+    global=yes
+  with_items:
+    - grunt-cli
+  when: node_install == True
