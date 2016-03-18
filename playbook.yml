@@ -1,5 +1,7 @@
 ---
 - hosts: mac
+  connection: local
+  user: {{ username }}
 
 # Roles
 # - General
@@ -11,6 +13,8 @@
 # - Git
 # - Mackup
 # - Sublime Text
+# - Zsh
+# - Zprezto
 
   tasks:
 
@@ -25,6 +29,6 @@
         - from: ~/Dropbox/mac/bin
           to: ~/bin
 
-# TODO: Run osxdefaults
+# TODO: Configure Dotfiles (osxdefaults)
 
-# TODO: Install zprezto (https://github.com/sorin-ionescu/prezto)
+# TODO: Configure Zprezto (https://github.com/sorin-ionescu/prezto)

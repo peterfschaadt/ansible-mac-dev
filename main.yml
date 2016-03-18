@@ -4,12 +4,22 @@
   hosts: mac
   sudo: True
 
+  pre_tasks:
+    - debug:
+        msg: Use Ansible to provision Mac for development.
+
   roles:
     # - { role: general, tags: ['general'] }
-    - { role: general }
-    - { role: osxlockdown }
-    - { role: python }
-    - { role: homebrew }
-    - { role: git }
-    - { role: mackup }
-    - { role: sublime_text }
+    # - { role: general, when: 'install_general == True' }
+    - role: general
+    - role: osxlockdown
+    - role: python
+    - role: ruby
+    - role: node
+    - role: homebrew
+    - role: git
+    - role: mackup
+    - role: sublime_text
+    # External roles
+    - role: zsh
+    - role: zprezto
