@@ -25,11 +25,12 @@ Roles
 - General
 - Osxlockdown
 - Python
+- Ruby
+- Node
 - Homebrew
 - Git
 - Mackup
 - Sublime Text
-- Node
 
 
 Usage

@@ -1,0 +1,10 @@
+---
+# Tasks for Ruby
+
+- name: Install Ruby gems
+  gem: name={{ item }} state=latest
+  with_items:
+    - brewbygems
+    - bundler
+    - compass
+  when: ruby_gems_install == True

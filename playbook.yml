@@ -5,6 +5,8 @@
 # - General
 # - Osxlockdown
 # - Python
+# - Ruby
+# - Node
 # - Homebrew
 # - Git
 # - Mackup
@@ -22,18 +24,6 @@
       with_items:
         - from: ~/Dropbox/mac/bin
           to: ~/bin
-
-#
-### Ruby
-#
-
-    - name: Install Ruby gems
-      gem: name={{ item }} state=latest
-      with_items:
-        - brewbygems
-        - bundler
-        - compass
-      when: ruby_gems_install == True
 
 # TODO: Run osxdefaults
 
