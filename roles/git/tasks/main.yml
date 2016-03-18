@@ -7,3 +7,23 @@
     dest={{ user_home }}/.gitconfig
     owner={{ username }}
     group=staff
+
+- name: Clone Git repositories
+  # git clone https://{{ item.git_repo_url }} {{ item.git_repo_path }}
+  git: >
+    repo='https://{{ github_user }}:{{ github_app_token }}@{{ item.git_repo_name }}.git'
+    dest='{{ item.git_repo_path }}'
+    version='master'
+    accept_hostkey=True
+    update=True
+    force=True
+  with_items:
+    - git_repo_name: repo
+      git_repo_url: https://github.com/user/repo
+      git_repo_path: /path/to/repo
+    - git_repo_name: repo
+      git_repo_url: https://github.com/user/repo
+      git_repo_path: /path/to/repo
+    - git_repo_name: repo
+      git_repo_url: https://github.com/user/repo
+      git_repo_path: /path/to/repo
