@@ -1,0 +1,11 @@
+# Ansible Dependencies
+
+# Zsh role
+- src: loliee.zsh
+  name: zsh
+  path: roles
+
+# Zprezto role
+- src: loliee.zprezto
+  name: zprezto
+  path: roles
