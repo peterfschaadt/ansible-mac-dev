@@ -31,6 +31,8 @@ Roles
 - Git
 - Mackup
 - Sublime Text
+- Zsh
+- Zprezto
 
 
 Usage
