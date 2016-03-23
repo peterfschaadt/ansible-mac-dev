@@ -17,6 +17,8 @@ Features
 - Homebrew Cask applications
 - Mackup restore
 - Mackup backup
+- Zsh configuration
+- Zprezto configuration
 
 
 Roles
