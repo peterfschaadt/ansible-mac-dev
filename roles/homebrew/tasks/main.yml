@@ -57,3 +57,11 @@
       - mackup
       - rbenv
       - ruby
+
+- name: Clean up Homebrew
+  command: brew cleanup -s --force --prune=7
+  ignore_errors: True
+
+- name: Clean up Homebrew Cask
+  command: brew cask cleanup
+  ignore_errors: True
