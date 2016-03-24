@@ -8,6 +8,9 @@
   easy_install: name=pip
   sudo: True
 
+- name: Upgrade pip with pip
+  command: pip install --upgrade pip
+
 - name: Install global packages with pip
   pip:
     name={{ item }}
