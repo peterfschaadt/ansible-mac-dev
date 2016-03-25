@@ -1,0 +1,30 @@
+#
+### Brew Taps
+#
+
+{% for tap in brew_taps %}
+    tap '{{ brew_taps.name }}'
+{% endfor %}
+
+#
+### Brew Packages
+#
+
+{% for package in brew_packages %}
+    brew '{{ brew_packages.name }}'
+{% endfor %}
+
+#
+### Brew Cask Options
+#
+
+cask_args caskroom: '~/Caskroom/Applications'
+cask_args appdir: '/Applications'
+
+#
+### Brew Cask Applications
+#
+
+{% for app in brew_apps %}
+    cask '{{ brew_apps.name }}'
+{% endfor %}
