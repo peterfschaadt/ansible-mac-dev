@@ -50,6 +50,60 @@ brew_packages:
   - name: sl
   - name: wget
 
+# Brew applications
+brew_apps:
+  # - name: android-file-transfer
+  # - name: android-studio
+  - name: arq
+  - name: atom
+  - name: bartender
+  - name: balsamiq-mockups
+  # - name: cathode
+  - name: charles
+  # - name: cocoarestclient'
+  - name: colorsnapper
+  - name: dash
+  - name: dockertoolbox
+  - name: dropbox
+  - name: evernote
+  - name: fantastical
+  - name: filezilla
+  - name: firefox
+  # - name: fitbit-connect
+  # - name: flirc
+  - name: flux
+  - name: flycut
+  - name: github-desktop
+  - name: google-chrome
+  - name: google-cloud-sdk
+  - name: google-drive
+  # - name: htc-sync-manager
+  - name: iterm2
+  # - name: jing
+  # - name: join.me
+  - name: karabiner
+  # - name: little-snitch
+  - name: macdown
+  # - name: namebench
+  # - name: paw
+  - name: pycharm
+  - name: qfinder
+  - name: radiant-player
+  - name: sequel-pro
+  # - name: silverlight
+  - name: slack
+  # - name: smcfancontrol
+  - name: sonos
+  - name: spectacle
+  - name: sublime-text
+  - name: the-unarchiver
+  - name: transmission
+  # - name: tribler
+  - name: vagrant
+  # - name: vagrant-manager
+  # - name: virtualbox
+  - name: vlc
+
 # Node options
 node_install: True
 
