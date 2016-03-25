@@ -19,6 +19,37 @@ brew_update: True
 brew_bundle: True
 brew_cask: True
 
+# Brew taps
+brew_taps:
+  - name: homebrew/binary
+  - name: homebrew/bundle
+  - name: caskroom/cask
+
+# Brew packages
+brew_packages:
+  - name: caskroom/cask/brew-cask
+  - name: ack
+  - name: archey
+  - name: autoconf
+  - name: cowsay
+  - name: cpanminus
+  - name: duckdns
+  - name: fortune
+  - name: fpp
+  - name: icdiff
+  - name: mackup
+  - name: openssl
+  - name: mysql
+  - name: pkg-config
+  - name: node
+  - name: packer
+  - name: pv
+  - name: pyenv
+  - name: pyenv-virtualenv
+  - name: redis
+  - name: sl
+  - name: wget
+
 # Node options
 node_install: True
 
