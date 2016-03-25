@@ -11,6 +11,7 @@ Features
 - Osxlockdown
 - Python pip install
 - Python virtualenv/virtualenv-wrapper install
+- Homebrew Bundle file creation
 - Homebrew install
 - Homebrew applications
 - Homebrew Cask install
