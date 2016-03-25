@@ -33,10 +33,17 @@
       - gapple/services
       - pivotal/tap
 
-- name: Copy Homebrew bundle file
+- name: Generate Homebrew bundle file
   template:
-    src='group_vars/templates/Brewfile.j2'
+    src='group_vars/templates/Brewfile.j2
     dest='{{ remote_dir_application }}/_settings.py'
+    creates=~/Brewfile
+    backup=yes
+
+# - name: Copy Homebrew bundle file
+#   template:
+#     src='group_vars/templates/Brewfile.j2'
+#     dest='{{ remote_dir_application }}/_settings.py'
 
 - name: Install programs with Homebrew's bundle
   command: brew bundle
