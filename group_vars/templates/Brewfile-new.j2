@@ -3,7 +3,7 @@
 #
 
 {% for tap in brew_taps %}
-    tap '{{ tap.name }}'
+tap '{{ tap.name }}'
 {% endfor %}
 
 #
@@ -11,7 +11,7 @@
 #
 
 {% for package in brew_packages %}
-    brew '{{ package.name }}'
+brew '{{ package.name }}'
 {% endfor %}
 
 #
@@ -26,7 +26,7 @@ cask_args appdir: '/Applications'
 #
 
 {% for app in brew_apps %}
-    cask '{{ app.name }}'
+cask '{{ app.name }}'
 {% endfor %}
 
 #
@@ -34,5 +34,5 @@ cask_args appdir: '/Applications'
 #
 
 {% for app in other_apps %}
-    # {{ app.name }}{% if app.app_store_only %} *{% endif %}
+# {{ app.name }}{% if app.app_store_only %} *{% endif %}
 {% endfor %}
