@@ -34,6 +34,7 @@ brew_packages:
   - name: cowsay
   - name: cpanminus
   - name: duckdns
+  - name: dark-mode
   - name: fortune
   - name: fpp
   - name: icdiff
@@ -48,6 +49,7 @@ brew_packages:
   - name: pyenv-virtualenv
   - name: redis
   - name: sl
+  - name: ssh-copy-id
   - name: wget
 
 # Brew applications
