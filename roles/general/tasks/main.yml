@@ -2,7 +2,8 @@
 # Tasks for General role
 
 - name: Print playbook info
-  debug: msg="Configuring Mac as user {{ lookup('env','USER') }}"
+  debug:
+    msg: Configuring Mac {{ lookup('env', 'HOST') }} as User {{ lookup('env', 'USER') }}
 
 - name: Set hostname
   command: scutil --set HostName {{ user_hostname }}
