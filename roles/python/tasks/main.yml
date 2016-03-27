@@ -13,10 +13,9 @@
 
 - name: Install global packages with pip
   pip:
-    name={{ item }}
+    name={{ item.name }}
+    version={{ item.version }}
     state=latest
   sudo: True
   with_items:
-    - ansible
-    - virtualenv
-    - virtualenv-wrapper
+    - pip_packages_global
