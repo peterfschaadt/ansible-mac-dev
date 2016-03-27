@@ -5,10 +5,14 @@ username: ''
 user_home: /Users/{{ username }}
 user_hostname: ''
 
+# Ansible-Mac-Dev (AMD) folder
+amd_folder: '{{ user_home }}/setup'
+
 # Osxlockdown options
 osxlockdown_install: True
 osxlockdown_url: https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
 osxlockdown_path: '{{ user_home }}'
+osxlockdown_path_options: '{{ user_home }}/.osxlockdown.json'
 
 # Shell options
 zsh_install: True
@@ -129,6 +133,8 @@ dotfiles_repo_path: ~/dotfiles
 
 # Python options
 pip_install: True
+
+# Pip packages
 pip_packages_global:
   - {name: ansible, version: 1.9.4}
   - name: fabric

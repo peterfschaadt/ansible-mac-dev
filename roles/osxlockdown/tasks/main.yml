@@ -1,19 +1,32 @@
 ---
 # Tasks for Osxlockdown role
 
-- name: Download osxlockdown
+- name: Download Osxlockdown
   get_url:
     url={{ osxlockdown_url }}
     dest={{ osxlockdown_path }}
+  when: osxlockdown_install == True
 
-- name: Unarchive osxlockdown
+- name: Unarchive Osxlockdown
   unarchive:
     src={{ osxlockdown_path }}
     dest={{ osxlockdown_path }}
     copy=no
+  when: osxlockdown_install == True
 
-- name: Run osxlockdown
-  command: ./osxlockdown --commands_file {{ osxlockdown_path }}/commands.json
+- name: Copy Osxlockdown options file
+  template:
+    src=group_vars/templates/osxlockdown.j2
+    dest='{{ osxlockdown_path_options }}'
+
+- name: Run Osxlockdown to check
+  command: ./osxlockdown --commands_file {{ osxlockdown_path_options }}
+    chdir={{ osxlockdown_path }}
+  sudo: True
+  when: osxlockdown_install == True
+
+- name: Run Osxlockdown to remediate
+  command: ./osxlockdown --remediate --commands_file {{ osxlockdown_path_options }}
     chdir={{ osxlockdown_path }}
   sudo: True
   when: osxlockdown_install == True

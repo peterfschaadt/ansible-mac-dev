@@ -8,7 +8,7 @@ Features
 --------
 
 - Xcode developer tools install
-- Osxlockdown
+- Osxlockdown (* Requires OS X 10.11 El Capitan)
 - Python pip install
 - Python virtualenv/virtualenv-wrapper install
 - Dotfiles for OS X
