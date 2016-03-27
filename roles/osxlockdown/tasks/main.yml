@@ -5,14 +5,12 @@
   get_url:
     url={{ osxlockdown_url }}
     dest={{ osxlockdown_path }}
-  when: osxlockdown_install == True
 
 - name: Unarchive Osxlockdown
   unarchive:
     src={{ osxlockdown_path }}
     dest={{ osxlockdown_path }}
     copy=no
-  when: osxlockdown_install == True
 
 - name: Copy Osxlockdown options file
   template:
@@ -23,10 +21,8 @@
   command: ./osxlockdown --commands_file {{ osxlockdown_path_options }}
     chdir={{ osxlockdown_path }}
   sudo: True
-  when: osxlockdown_install == True
 
 - name: Run Osxlockdown to remediate
   command: ./osxlockdown --remediate --commands_file {{ osxlockdown_path_options }}
     chdir={{ osxlockdown_path }}
   sudo: True
-  when: osxlockdown_install == True

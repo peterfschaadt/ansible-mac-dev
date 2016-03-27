@@ -12,7 +12,7 @@
     # - { role: general, tags: ['general'] }
     # - { role: general, when: 'install_general == True' }
     - role: general
-    - role: osxlockdown
+    - {role: osxlockdown, when: 'osxlockdown_install == True'}
     - role: python
     - role: ruby
     - role: node
