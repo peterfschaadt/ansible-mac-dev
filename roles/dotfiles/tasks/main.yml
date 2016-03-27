@@ -1,0 +1,7 @@
+---
+# Tasks for Dotfiles role
+
+- name: Clone dotfiles repository locally
+  git:
+    repo: '{{ dotfiles_repo }}'
+    dest: '{{ dotfiles_repo_path }}'
