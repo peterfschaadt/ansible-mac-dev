@@ -120,6 +120,11 @@ other_apps:
   - name: SyncTwoFolders
   - name: TIPP10
 
+# Dotfiles options
+dotfiles_install: True
+dotfiles_repo: https://github.com/mathiasbynens/dotfiles
+dotfiles_repo_path: ~/dotfiles
+
 # Node options
 node_install: True
 
