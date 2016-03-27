@@ -11,6 +11,7 @@ Features
 - Osxlockdown
 - Python pip install
 - Python virtualenv/virtualenv-wrapper install
+- Dotfiles for OS X
 - Homebrew Bundle file creation
 - Homebrew install
 - Homebrew applications
@@ -31,6 +32,7 @@ Roles
 - Ruby
 - Node
 - Homebrew
+- Dotfiles
 - Git
 - Mackup
 - Sublime Text

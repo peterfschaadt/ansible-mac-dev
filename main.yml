@@ -17,6 +17,7 @@
     - role: ruby
     - role: node
     - role: homebrew
+    - role: dotfiles
     - role: git
     - role: mackup
     - role: sublime_text
