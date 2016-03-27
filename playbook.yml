@@ -15,7 +15,7 @@
 # - Mackup
 # - Sublime Text
 # - Zsh
-# - Zprezto
+# - Prezto
 
   tasks:
 
@@ -32,4 +32,4 @@
 
 # TODO: Configure Dotfiles (osxdefaults)
 
-# TODO: Configure Zprezto (https://github.com/sorin-ionescu/prezto)
+# TODO: Configure Prezto (https://github.com/sorin-ionescu/prezto)

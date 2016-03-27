@@ -20,7 +20,7 @@ Features
 - Mackup restore
 - Mackup backup
 - Zsh configuration
-- Zprezto configuration
+- Prezto configuration
 
 
 Roles
@@ -37,7 +37,7 @@ Roles
 - Mackup
 - Sublime Text
 - Zsh
-- Zprezto
+- Prezto
 
 
 Usage

@@ -23,4 +23,4 @@
     - role: sublime_text
     # External roles
     - role: zsh
-    - role: zprezto
+    - role: prezto

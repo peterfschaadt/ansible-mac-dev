@@ -12,7 +12,7 @@ osxlockdown_path: '{{ user_home }}'
 
 # Shell options
 zsh_install: True
-zsh_zprezto_install: True
+zsh_prezto_install: True
 
 # Brew options
 brew_update: True

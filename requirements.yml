@@ -5,7 +5,7 @@
   name: zsh
   path: roles
 
-# Zprezto role
-- src: loliee.zprezto
-  name: zprezto
+# Prezto role
+- src: loliee.prezto
+  name: prezto
   path: roles
