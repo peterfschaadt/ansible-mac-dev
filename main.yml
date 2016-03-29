@@ -6,7 +6,10 @@
 
   pre_tasks:
     - debug:
-        msg: Use Ansible to provision Mac for development.
+        msg=Use Ansible to provision Mac for development.
+
+    - debug:
+        msg=Configuring Mac {{ lookup('env', 'HOST') }} as User {{ lookup('env', 'USER') }}.
 
   roles:
     # - { role: general, tags: ['general'] }
