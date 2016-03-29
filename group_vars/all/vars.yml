@@ -92,6 +92,7 @@ brew_apps:
   - name: macdown
   # - name: namebench
   # - name: paw
+  - name: private-internet-access
   - name: pycharm
   - name: qfinder
   - name: radiant-player
