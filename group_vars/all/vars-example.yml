@@ -1,0 +1,168 @@
+---
+
+# User options
+username: ''
+user_home: /Users/{{ username }}
+user_hostname: ''
+
+# Ansible-Mac-Dev (AMD) folder
+amd_folder: '{{ user_home }}/setup'
+
+# Osxlockdown options
+osxlockdown_install: True
+osxlockdown_url: https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
+osxlockdown_path: '{{ user_home }}'
+osxlockdown_path_options: '{{ user_home }}/.osxlockdown.json'
+
+# Shell options
+zsh_install: True
+zsh_prezto_install: True
+
+# Brew options
+brew_update: True
+brew_bundle: True
+brew_cask: True
+
+# Brew taps
+brew_taps:
+  - name: homebrew/binary
+  - name: homebrew/bundle
+  - name: caskroom/cask
+
+# Brew packages
+brew_packages:
+  - name: caskroom/cask/brew-cask
+  - name: ack
+  - name: archey
+  - name: autoconf
+  - name: cowsay
+  - name: cpanminus
+  - name: duckdns
+  - name: dark-mode
+  - name: fortune
+  - name: fpp
+  - name: icdiff
+  - name: mackup
+  - name: openssl
+  - name: mysql
+  - name: pkg-config
+  - name: node
+  - name: packer
+  - name: pv
+  - name: pyenv
+  - name: pyenv-virtualenv
+  - name: redis
+  - name: sl
+  - name: ssh-copy-id
+  - name: wget
+
+# Brew applications
+brew_apps:
+  # - name: android-file-transfer
+  # - name: android-studio
+  - name: arq
+  - name: atom
+  - name: bartender
+  - name: balsamiq-mockups
+  # - name: cathode
+  - name: charles
+  # - name: cocoarestclient'
+  - name: colorsnapper
+  - name: dash
+  - name: dockertoolbox
+  - name: dropbox
+  - name: evernote
+  - name: fantastical
+  - name: filezilla
+  - name: firefox
+  # - name: fitbit-connect
+  # - name: flirc
+  - name: flux
+  - name: flycut
+  - name: github-desktop
+  - name: google-chrome
+  - name: google-cloud-sdk
+  - name: google-drive
+  # - name: htc-sync-manager
+  - name: iterm2
+  # - name: jing
+  # - name: join.me
+  - name: karabiner
+  # - name: little-snitch
+  - name: macdown
+  # - name: namebench
+  # - name: paw
+  - name: private-internet-access
+  - name: pycharm
+  - name: qfinder
+  - name: radiant-player
+  - name: sequel-pro
+  # - name: silverlight
+  - name: slack
+  # - name: smcfancontrol
+  - name: sonos
+  - name: spectacle
+  - name: sublime-text
+  - name: the-unarchiver
+  - name: transmission
+  # - name: tribler
+  - name: vagrant
+  # - name: vagrant-manager
+  # - name: virtualbox
+  - name: vlc
+
+# Other applications
+other_apps:
+  - {name: Amphetamine, app_store_only: True}
+  - name: AVNavigator 2013
+  - name: BIG-IP Edge Client
+  - {name: Disk Diag, app_store_only: True}
+  - {name: Eggscellent, app_store_only: True}
+  - name: Google Chrome Canary
+  - {name: Memory Monitor, app_store_only: True}
+  - name: PdaNetMac
+  - {name: Pomodoro Time, app_store_only: True}
+  - {name: Sketch, app_store_only: True}
+  - name: Sparrow
+  - name: SyncTwoFolders
+  - name: TIPP10
+
+# Dotfiles options
+dotfiles_install: True
+dotfiles_repo: https://github.com/mathiasbynens/dotfiles
+dotfiles_repo_path: ~/dotfiles
+
+# Python options
+pip_install: True
+
+# Pip packages
+pip_packages_global:
+  - {name: ansible, version: 1.9.4}
+  - name: fabric
+  - name: flake8
+  - name: pep8
+  - name: py2app
+  - name: rumps
+  - name: vboxapi
+  - name: virtualenv
+  - name: virtualenv-clone
+  - name: virtualenv-wrapper
+  - name: youtube-dl
+
+# Ruby options
+ruby_gems_install: False
+
+# Node options
+node_install: True
+
+# Sublime Text options
+sublime_install: True
+sublime_cli_install: True
+sublime_package_manager_install: True
+
+# Mackup options:
+mackup_install: True
+mackup_restore: True
+mackup_backup: True
+mackup_engine: 'dropbox'
+mackup_path: ''
