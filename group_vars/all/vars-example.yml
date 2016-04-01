@@ -155,6 +155,14 @@ ruby_gems_install: False
 # Node options
 node_install: True
 
+# Git options
+github_user: peterfschaadt
+github_app_token: t0k3n
+git_repos:
+  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
+  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
+  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
+
 # Sublime Text options
 sublime_install: True
 sublime_cli_install: True
