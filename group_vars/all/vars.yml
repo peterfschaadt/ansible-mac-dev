@@ -114,6 +114,7 @@ brew_apps:
 # Other applications
 other_apps:
   - {name: Amphetamine, app_store_only: True}
+  - {name: Authy, chrome_app: True}
   - name: AVNavigator 2013
   - name: BIG-IP Edge Client
   - {name: Disk Diag, app_store_only: True}
