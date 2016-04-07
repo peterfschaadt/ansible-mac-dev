@@ -123,6 +123,7 @@ other_apps:
   - {name: Memory Monitor, app_store_only: True}
   - name: PdaNetMac
   - {name: Pomodoro Time, app_store_only: True}
+  - {name: Postman, chrome_app: True}
   - {name: Sketch, app_store_only: True}
   - name: Sparrow
   - name: SyncTwoFolders
