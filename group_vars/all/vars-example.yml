@@ -120,6 +120,7 @@ other_apps:
   - {name: Disk Diag, app_store_only: True}
   - {name: Eggscellent, app_store_only: True}
   - name: Google Chrome Canary
+  - {name: Google Keep, chrome_app: True}
   - {name: Memory Monitor, app_store_only: True}
   - name: PdaNetMac
   - {name: Pomodoro Time, app_store_only: True}
