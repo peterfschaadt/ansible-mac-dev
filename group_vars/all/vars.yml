@@ -104,6 +104,7 @@ brew_apps:
   - name: spectacle
   - name: sublime-text
   - name: the-unarchiver
+  - name: tower
   - name: transmission
   - name: tunnelblick
   # - name: tribler
