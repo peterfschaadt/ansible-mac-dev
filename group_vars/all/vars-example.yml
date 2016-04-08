@@ -105,6 +105,7 @@ brew_apps:
   - name: sublime-text
   - name: the-unarchiver
   - name: transmission
+  - name: tunnelblick
   # - name: tribler
   - name: vagrant
   # - name: vagrant-manager
