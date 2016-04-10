@@ -164,9 +164,10 @@ node_install: True
 github_user: peterfschaadt
 github_app_token: t0k3n
 git_repos:
-  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
-  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
-  - {name: repo, url: github.com/user/repo, path: /path/to/repo}
+  - {name: repo, url: github.com/peterfschaadt/ansible-mac-dev, path: /Users/pschaadt/code/python/ansible}
+  - {name: repo, url: github.com/peterfschaadt/ansible-template-basic, path: /Users/pschaadt/code/python/ansible}
+  - {name: repo, url: github.com/peterfschaadt/ansible-docker-base, path: /Users/pschaadt/code/python/ansible}
+  - {name: repo, url: github.com/peterfschaadt/ansible-plex, path: /Users/pschaadt/code/python/ansible}
 
 # Sublime Text options
 sublime_install: True
