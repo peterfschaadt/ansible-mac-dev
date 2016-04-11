@@ -167,6 +167,7 @@ git_repos:
   - {name: repo, url: github.com/peterfschaadt/ansible-mac-dev, path: /Users/pschaadt/code/python/ansible}
   - {name: repo, url: github.com/peterfschaadt/ansible-template-basic, path: /Users/pschaadt/code/python/ansible}
   - {name: repo, url: github.com/peterfschaadt/ansible-docker-base, path: /Users/pschaadt/code/python/ansible}
+  - {name: repo, url: github.com/peterfschaadt/ansible-pi-setup, path: /Users/pschaadt/code/python/ansible}
   - {name: repo, url: github.com/peterfschaadt/ansible-plex, path: /Users/pschaadt/code/python/ansible}
 
 # Sublime Text options
