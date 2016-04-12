@@ -1,7 +1,8 @@
 ---
 
 - name: main.yml | All roles
-  hosts: mac
+  hosts: macbook
+  gather_facts: False
   sudo: True
 
   pre_tasks:
