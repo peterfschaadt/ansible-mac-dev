@@ -73,6 +73,7 @@ brew_apps:
   - name: dropbox
   - name: evernote
   - name: fantastical
+  - name: filebot
   - name: filezilla
   - name: firefox
   # - name: fitbit-connect
@@ -85,6 +86,7 @@ brew_apps:
   - name: google-drive
   # - name: htc-sync-manager
   - name: iterm2
+  - name: java
   # - name: jing
   # - name: join.me
   - name: karabiner
