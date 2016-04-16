@@ -28,6 +28,7 @@ brew_taps:
   - name: homebrew/binary
   - name: homebrew/bundle
   - name: caskroom/cask
+  - name: caskroom/versions
 
 # Brew packages
 brew_packages:
@@ -37,7 +38,6 @@ brew_packages:
   - name: autoconf
   - name: cowsay
   - name: cpanminus
-  - name: duckdns
   - name: dark-mode
   - name: fortune
   - name: fpp
@@ -102,7 +102,8 @@ brew_apps:
   # - name: smcfancontrol
   - name: sonos
   - name: spectacle
-  - name: sublime-text
+  - name: sublime
+  - name: sublime-text3
   - name: the-unarchiver
   - name: tower
   - name: transmission
