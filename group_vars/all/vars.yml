@@ -96,7 +96,7 @@ brew_apps:
   # - name: paw
   - name: private-internet-access
   - name: pycharm
-  - name: qfinder
+  # - name: qfinder
   - name: radiant-player
   - name: sequel-pro
   # - name: silverlight
