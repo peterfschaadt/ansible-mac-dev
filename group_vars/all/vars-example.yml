@@ -60,6 +60,7 @@ brew_packages:
 brew_apps:
   # - name: android-file-transfer
   # - name: android-studio
+  - name: appcleaner
   - name: arq
   - name: atom
   - name: bartender
