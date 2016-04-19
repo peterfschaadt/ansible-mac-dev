@@ -43,6 +43,7 @@ brew_packages:
   - name: fortune
   - name: fpp
   - name: git
+  - name: git-standup
   - name: icdiff
   - name: mackup
   - name: openssl
