@@ -36,6 +36,7 @@ brew_packages:
   - name: ack
   - name: archey
   - name: autoconf
+  - name: bash
   - name: cowsay
   - name: cpanminus
   - name: dark-mode
@@ -55,6 +56,7 @@ brew_packages:
   - name: sl
   - name: ssh-copy-id
   - name: wget
+  - name: zsh
 
 # Brew applications
 brew_apps:
