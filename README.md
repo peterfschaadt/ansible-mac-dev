@@ -43,7 +43,9 @@ Roles
 Usage
 -----
 
-Coming soon.
+```
+$ ansible-playbook -i inventories/macbook --ask-pass main.yml
+```
 
 
 Author
