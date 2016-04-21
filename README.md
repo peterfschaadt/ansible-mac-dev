@@ -43,8 +43,14 @@ Roles
 Usage
 -----
 
+Running locally:
 ```
-$ ansible-playbook -i inventories/macbook --ask-pass main.yml
+$ ansible-playbook -i inventories/macbook -c local --ask-pass --ask-sudo-pass main.yml
+```
+
+Running remotely:
+```
+$ ansible-playbook -i inventories/macbook --ask-pass --ask-sudo-pass main.yml
 ```
 
 
