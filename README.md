@@ -40,6 +40,13 @@ Roles
 - Prezto
 
 
+Getting Started
+---------------
+
+1. Modify the group_vars/vars/vars-example.yml file and rename it to vars.yml.
+
+2. Modify the inventories/mac-example file and rename it to mac or macbook.
+
 Usage
 -----
 
