@@ -47,6 +47,9 @@ Getting Started
 
 2. Modify the inventories/mac-example file and rename it to mac or macbook.
 
+3. Use ansible-playbook to run the main.yml playbook or an individual role.
+
+
 Usage
 -----
 
