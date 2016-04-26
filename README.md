@@ -53,14 +53,24 @@ Getting Started
 Usage
 -----
 
-Running locally:
+Running all roles locally:
 ```
 $ ansible-playbook -i inventories/macbook -c local --ask-pass --ask-sudo-pass main.yml
 ```
 
-Running remotely:
+Running a single role locally:
+```
+$ ansible-playbook -i inventories/macbook -c local --ask-pass --ask-sudo-pass roles/git/tasks/main.yml
+```
+
+Running all roles remotely:
 ```
 $ ansible-playbook -i inventories/macbook --ask-pass --ask-sudo-pass main.yml
+```
+
+Running a single role remotely:
+```
+$ ansible-playbook -i inventories/macbook --ask-pass --ask-sudo-pass roles/git/tasks/main.yml
 ```
 
 
