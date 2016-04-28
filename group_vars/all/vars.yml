@@ -58,6 +58,7 @@ brew_packages:
   - name: sl
   - name: ssh-copy-id
   - name: wget
+  - name: youtube-dl
   - name: zsh
 
 # Brew applications
