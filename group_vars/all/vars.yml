@@ -39,6 +39,7 @@ brew_packages:
   - name: bash
   - name: cowsay
   - name: cpanminus
+  - name: curl
   - name: dark-mode
   - name: fortune
   - name: fpp
@@ -72,7 +73,7 @@ brew_apps:
   - name: balsamiq-mockups
   # - name: cathode
   - name: charles
-  # - name: cocoarestclient'
+  # - name: cocoarestclient
   - name: colorsnapper
   - name: dash
   - name: dockertoolbox
