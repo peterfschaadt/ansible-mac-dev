@@ -120,7 +120,7 @@ brew_apps:
   # - name: tribler
   - name: vagrant
   # - name: vagrant-manager
-  # - name: virtualbox
+  - name: virtualbox
   - name: vlc
 
 # Other applications
