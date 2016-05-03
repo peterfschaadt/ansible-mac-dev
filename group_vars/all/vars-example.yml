@@ -64,6 +64,7 @@ brew_packages:
 
 # Brew applications
 brew_apps:
+  - name: airmail-beta
   # - name: android-file-transfer
   # - name: android-studio
   - name: appcleaner
