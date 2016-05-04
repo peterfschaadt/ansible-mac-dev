@@ -1,9 +1,9 @@
 ---
 
 # User options
-username: ''
+username: 'pschaadt'
 user_home: /Users/{{ username }}
-user_hostname: ''
+user_hostname: 'Peter-Pro'
 
 # Ansible-Mac-Dev (AMD) folder
 amd_folder: '{{ user_home }}/setup'
