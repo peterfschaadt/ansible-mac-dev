@@ -45,10 +45,11 @@ brew_packages:
   - name: fpp
   - name: git
   - name: git-standup
+  - name: htop
   - name: icdiff
   - name: mackup
-  - name: openssl
   - name: mysql
+  - name: openssl
   - name: pkg-config
   - name: node
   - name: packer
