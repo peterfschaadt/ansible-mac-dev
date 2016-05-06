@@ -37,6 +37,7 @@ brew_packages:
   - name: archey
   - name: autoconf
   - name: bash
+  - name: colordiff
   - name: cowsay
   - name: cpanminus
   - name: curl
