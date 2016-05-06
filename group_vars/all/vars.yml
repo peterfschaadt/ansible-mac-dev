@@ -51,9 +51,10 @@ brew_packages:
   - name: icdiff
   - name: mackup
   - name: mysql
+  - name: nmap
+  - name: node
   - name: openssl
   - name: pkg-config
-  - name: node
   - name: packer
   - name: pv
   - name: pyenv
