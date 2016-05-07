@@ -62,6 +62,7 @@ brew_packages:
   - name: redis
   - name: sl
   - name: ssh-copy-id
+  - name: webkit2png
   - name: wget
   - name: youtube-dl
   - name: zsh
