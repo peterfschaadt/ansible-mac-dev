@@ -42,6 +42,7 @@ brew_packages:
   - name: cpanminus
   - name: curl
   - name: dark-mode
+  - name: ffmpeg
   - name: fortune
   - name: fpp
   - name: geoip
