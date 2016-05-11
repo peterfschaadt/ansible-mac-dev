@@ -39,7 +39,6 @@ brew_packages:
   - name: bash
   - name: colordiff
   - name: cowsay
-  - name: cpanminus
   - name: curl
   - name: dark-mode
   - name: ffmpeg
