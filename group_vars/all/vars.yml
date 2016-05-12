@@ -112,6 +112,7 @@ brew_apps:
   - name: pycharm
   # - name: qfinder
   - name: radiant-player
+  - name: rcdefaultapp
   - name: sequel-pro
   # - name: silverlight
   - name: slack
