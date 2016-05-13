@@ -35,7 +35,6 @@ brew_packages:
   - name: caskroom/cask/brew-cask
   - name: ack
   - name: archey
-  - name: autoconf
   - name: bash
   - name: colordiff
   - name: cowsay
