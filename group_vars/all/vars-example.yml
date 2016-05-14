@@ -49,7 +49,6 @@ brew_packages:
   - name: htop
   - name: icdiff
   - name: mackup
-  - name: mysql
   - name: nmap
   - name: node
   - name: openssl
