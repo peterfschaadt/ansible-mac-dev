@@ -52,7 +52,6 @@ brew_packages:
   - name: nmap
   - name: node
   - name: openssl
-  - name: pkg-config
   - name: packer
   - name: pv
   - name: pyenv
