@@ -77,7 +77,7 @@ brew_apps:
   - name: balsamiq-mockups
   # - name: cathode
   - name: charles
-  # - name: cocoarestclient
+  - name: cocoarestclient
   - name: colorsnapper
   - name: dash
   - name: dockertoolbox
