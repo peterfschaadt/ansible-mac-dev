@@ -80,7 +80,7 @@ brew_apps:
   - name: cocoarestclient
   - name: colorsnapper
   - name: dash
-  - name: dockertoolbox
+  - name: docker-toolbox
   - name: dropbox
   - name: evernote
   - name: fantastical
@@ -105,20 +105,21 @@ brew_apps:
   - name: macdown
   # - name: namebench
   # - name: paw
-  - name: private-internet-access
+  # - name: private-internet-access
   - name: pycharm
   # - name: qfinder
   - name: radiant-player
   - name: rcdefaultapp
   - name: sequel-pro
   # - name: silverlight
-  - name: slack
+  - name: slack-beta
   # - name: smcfancontrol
   - name: sonos
   - name: spectacle
   - name: sublime
-  - name: sublime-text3
+  - name: sublime-text
   - name: the-unarchiver
+  - name: torguard
   - name: tower
   - name: transmission
   - name: tunnelblick
@@ -128,7 +129,7 @@ brew_apps:
   - name: virtualbox
   - name: vlc
 
-# Other applications
+# Other applications (app_store_only, use MAS)
 other_apps:
   - {name: Amphetamine, app_store_only: True}
   - {name: Authy, chrome_app: True}
@@ -138,6 +139,7 @@ other_apps:
   - {name: Eggscellent, app_store_only: True}
   - name: Google Chrome Canary
   - {name: Google Keep, chrome_app: True}
+  - {name: Magnet, app_store_only: True}
   - {name: Memory Monitor, app_store_only: True}
   - name: PdaNetMac
   - {name: Pomodoro Time, app_store_only: True}
@@ -157,7 +159,7 @@ pip_install: True
 
 # Pip packages
 pip_packages_global:
-  - {name: ansible, version: 1.9.4}
+  - {name: ansible, version: 1.9.6}
   - name: fabric
   - name: flake8
   - name: pep8
