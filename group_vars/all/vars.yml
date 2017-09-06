@@ -128,6 +128,7 @@ brew_apps:
   # - name: vagrant-manager
   - name: virtualbox
   - name: vlc
+  - name: zeplin
 
 # Other applications (app_store_only, use MAS)
 other_apps:
